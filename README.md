@@ -1,4 +1,4 @@
-# Boruta
+# Boruta OAuth provider core
 
 Boruta is the core of an OAuth provider giving business logic of authentication and authorization.
 
@@ -8,14 +8,12 @@ It is intended to follow RFCs :
 
 As it, it helps implement a provider for authorization code, implicit, client credentials and resource owner password credentials grants. Then it follows Introspection to check tokens.
 
-Note : Refresh tokens are not implemented yet
-
 ## Installation
 1. __Schemas migration__
 
 Boruta need a migration for its schemas and persist both tokens and clients. This can be done by running
 ```
-mix boruta.gen.migration
+mix boruta.gen.migration --with-coherence
 ```
 
 2. __Configuration__
@@ -42,4 +40,4 @@ In order to expose endpoints of an OAuth server with Boruta, you need implement 
 This library has specific interfaces to interact with `Plug.Conn` requests.
 
 ## Feedback
-It is a work in progress, all feedbacks / feature requests / improvments are welcome -> [me](mailto:pascal.knoth@gmx.com)
+It is a work in progress, all feedbacks / feature requests / improvments are welcome
